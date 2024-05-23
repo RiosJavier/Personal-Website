@@ -24,13 +24,13 @@ header {
 
 /* Navigation styling */
 nav ul {
-    list-style-type: none;
-    padding: 0; /* Removes padding */
-    margin: 0; /* Ensures there's no default margin */
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Ensures links are displayed in a line */
     margin: 0 10px; /* Adjusts margin around navigation links */
 }
 
@@ -53,6 +53,17 @@ main {
 section {
     margin: 20px 0; /* Provides uniform margin for sections */
     width: 100%; /* Full width for consistency */
+}
+
+/* Additional list styling for content lists */
+ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+li {
+    margin: 10px 0; /* Adds vertical spacing between list items */
 }
 
 /* Footer styling */
