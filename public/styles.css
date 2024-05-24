@@ -1,76 +1,140 @@
-html, body {
-    height: 100%; /* Makes sure the html and body tags take full viewport height */
+/* Reset some basic elements for consistency */
+body, h1, p, ul, li, header, main, section, footer {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Centers content vertically within the viewport */
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     text-align: center;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    width: 100%; /* Ensures body takes the full width */
-}
-
-/* Header styling */
+/* Header styles */
 header {
-    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
     color: white;
-    padding: 20px 0; /* Adjusted padding for better spacing */
-    width: 100%; /* Ensures header takes full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation styling */
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 nav ul {
-    list-style-type: none; /* Removes default bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-}
-
-nav ul li {
-    display: inline-block; /* Ensures links are displayed in a line */
-    margin: 0 10px; /* Adjusts margin around navigation links */
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-/* Main content styling */
+nav ul li a:hover {
+    color: #ff7e5f;
+}
+
+/* Main section styles */
 main {
-    flex: 1; /* Allows main to expand and fill available space, pushing footer down */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content within the main vertically */
-    align-items: center; /* Centers content horizontally */
-    width: 100%; /* Ensures main takes full width */
+    align-items: center;
+    padding: 3rem 0;
 }
 
-/* Sections within main */
-section {
-    margin: 20px 0; /* Provides uniform margin for sections */
-    width: 100%; /* Full width for consistency */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem;
+    gap: 3rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-/* Additional list styling for content lists */
-ul {
-    list-style-type: none; /* Removes default bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
+.intro-text {
+    max-width: 600px;
+    text-align: left;
 }
 
-li {
-    margin: 10px 0; /* Adds vertical spacing between list items */
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-/* Footer styling */
+.intro h1 span {
+    background-color: #ff7e5f;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.intro p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-start;
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button.primary {
+    background-color: #ff7e5f;
+    color: #fff;
+}
+
+.button.primary:hover {
+    background-color: #feb47b;
+}
+
+.button.secondary {
+    background-color: #fff;
+    color: #ff7e5f;
+    border: 2px solid #ff7e5f;
+}
+
+.button.secondary:hover {
+    background-color: #ff7e5f;
+    color: #fff;
+}
+
+/* Intro image styles */
+.intro-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer styles */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    width: 100%; /* Ensures footer takes full width */
-    flex-shrink: 0; /* Prevents footer from shrinking if content is too short */
+    padding: 1rem 0;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
 }
