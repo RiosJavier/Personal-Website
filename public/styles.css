@@ -1,76 +1,39 @@
-html, body {
-    height: 100%; /* Makes sure the html and body tags take full viewport height */
+/* styles.css */
+@import url('header.css');
+@import url('intro.css');
+@import url('projects.css');
+@import url('footer.css');
+
+/* Global styles */
+body, h1, h2, h3, p, ul, li, header, main, section, footer {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Centers content vertically within the viewport */
-    text-align: center;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    width: 100%; /* Ensures body takes the full width */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
 }
 
-/* Header styling */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0; /* Adjusted padding for better spacing */
-    width: 100%; /* Ensures header takes full width */
-}
-
-/* Navigation styling */
-nav ul {
-    list-style-type: none; /* Removes default bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-}
-
-nav ul li {
-    display: inline-block; /* Ensures links are displayed in a line */
-    margin: 0 10px; /* Adjusts margin around navigation links */
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Main content styling */
 main {
-    flex: 1; /* Allows main to expand and fill available space, pushing footer down */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers content within the main vertically */
-    align-items: center; /* Centers content horizontally */
-    width: 100%; /* Ensures main takes full width */
+    margin-top: 100px; 
 }
 
-/* Sections within main */
-section {
-    margin: 20px 0; /* Provides uniform margin for sections */
-    width: 100%; /* Full width for consistency */
-}
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        padding: 2rem;
+    }
 
-/* Additional list styling for content lists */
-ul {
-    list-style-type: none; /* Removes default bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-}
+    .intro-image {
+        margin-top: 2rem;
+    }
 
-li {
-    margin: 10px 0; /* Adds vertical spacing between list items */
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    width: 100%; /* Ensures footer takes full width */
-    flex-shrink: 0; /* Prevents footer from shrinking if content is too short */
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
