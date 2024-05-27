@@ -3,6 +3,7 @@
 @import url('intro.css');
 @import url('about.css');
 @import url('projects.css');
+@import url('contact.css');
 @import url('footer.css');
 
 /* Global styles */
@@ -21,6 +22,10 @@ body {
 
 main {
     margin-top: 100px; 
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {

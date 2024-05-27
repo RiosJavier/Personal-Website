@@ -14,8 +14,12 @@
 }
 
 .intro-text {
-    max-width: 600px;
     text-align: left;
+    margin-right: 2rem;
+}
+
+.intro-text p {
+    margin-top: 1.5rem; /* Adjust this value to move the paragraph down */
 }
 
 .intro h1 {

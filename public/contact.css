@@ -1,0 +1,55 @@
+/* contact.css */
+.contact {
+    padding: 3rem 2rem;
+    background-color: #f4f4f9;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #007BFF;
+}
+
+.contact-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-content {
+    text-align: left;
+}
+
+.contact-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contact-links {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-links li {
+    margin-bottom: 1rem;
+}
+
+.contact-links li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-links li a i {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-links li a:hover {
+    color: #00C6FF;
+}
