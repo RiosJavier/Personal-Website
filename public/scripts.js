@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setInterval(createSparkle, 200);
 
+    // Make header transparent during welcome screen
+    const header = document.querySelector('header');
+    header.classList.add('transparent');
+
     // Adjust font animation speed: fast then slow down
     setTimeout(function() {
         document.getElementById('welcome-name').style.animationDuration = '1s';
@@ -28,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 document.getElementById('welcome-screen').style.display = 'none';
                 document.body.style.overflow = 'auto';
+                header.classList.remove('transparent'); // Remove transparent class after welcome screen
             }, 1000); // Match this duration with the CSS transition
         }, 1000); // Display final font for 1 second
     }, 4000); // Duration of the font animation
