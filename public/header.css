@@ -14,10 +14,6 @@ header {
     transition: background 1s ease, color 1s ease; /* Smooth transition */
 }
 
-header.transparent {
-    background: transparent; /* Fully transparent during welcome screen */
-    color: white;
-}
 
 header .logo {
     font-size: 2rem;
