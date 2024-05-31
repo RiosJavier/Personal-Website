@@ -1,4 +1,5 @@
 /* styles.css */
+@import url('welcome.css');
 @import url('header.css');
 @import url('intro.css');
 @import url('about.css');
