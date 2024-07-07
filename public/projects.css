@@ -1,13 +1,13 @@
 /* projects.css */
 .projects {
     padding: 3rem 2rem;
-    /*margin-top: 2rem;*/
 }
 
 .projects h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #007BFF;
+    color: #ff99cc;
+    font-family: 'VT323', monospace;
 }
 
 .project-list {
@@ -30,7 +30,8 @@
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #007BFF;
+    color: #ff99cc;
+    font-family: 'VT323', monospace;
 }
 
 .project-card p {

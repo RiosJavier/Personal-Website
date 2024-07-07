@@ -1,13 +1,14 @@
 /* about.css */
 .about-me {
     padding: 3rem 2rem;
-    background-color: #f4f4f9;
+    background-color: #f0f0f3;
 }
 
 .about-me h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #007BFF;
+    color: #ff99cc;
+    font-family: 'VT323', monospace;
 }
 
 .about-card {
