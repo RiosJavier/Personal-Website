@@ -22,7 +22,8 @@ body, h1, h2, h3, p, ul, li, header, main, section, footer {
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background-color: #f0f0f3;
+    background: linear-gradient(135deg, #ff99cc 0%, #ffccff 50%, #99ccff 100%);
+    background-attachment: fixed;
     color: #333;
     text-align: center;
     font-size: 18px;  /* Increase the base font size */
@@ -56,4 +57,66 @@ html {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* Geometric Shapes */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path_to_your_geometric_image.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.geometric-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.geometric-shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rotate 20s infinite linear;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Shape positions */
+.shape1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 15%;
+}
+
+.shape2 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    right: 10%;
+}
+
+.shape3 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+}
+
+/* Ensure all sections have the same background */
+section {
+    background: inherit;
+    padding: 2rem 0;
 }
