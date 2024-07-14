@@ -1,10 +1,9 @@
 /* footer.css */
 footer {
     padding: 1rem 0;
-    background: linear-gradient(90deg, #007BFF, #00C6FF);
+    background: linear-gradient(90deg, #ff99cc, #ffccff);
     color: #fff;
     width: 100%;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
 }

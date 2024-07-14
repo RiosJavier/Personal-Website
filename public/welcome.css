@@ -1,5 +1,5 @@
  /* welcome.css */
-body, html {
+ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -48,7 +48,7 @@ body, html {
 }
 
 #welcome-name {
-    font-size: 4rem;
+    font-size: 5rem;  /* Increase the welcome name font size */
     animation: font-animation 3s ease-in-out infinite;
 }
 
@@ -63,7 +63,7 @@ body, html {
     70% { font-family: 'Lucida Console', monospace; }
     80% { font-family: 'Garamond', serif; }
     90% { font-family: 'Impact', sans-serif; }
-    100% { font-family: 'Poppins', sans-serif; }
+    100% { font-family: 'DM Sans', sans-serif; }
 }
 
 .hidden {

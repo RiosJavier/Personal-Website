@@ -1,13 +1,14 @@
 /* contact.css */
 .contact {
     padding: 3rem 2rem;
-    background-color: #f4f4f9;
+    background-color: #f0f0f3;
 }
 
 .contact h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;  /* Increase the contact heading font size */
     margin-bottom: 2rem;
-    color: #007BFF;
+    color: #ff99cc;
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
 }
 
 .contact-card {
@@ -26,6 +27,8 @@
 .contact-content p {
     margin-bottom: 1rem;
     line-height: 1.6;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;  /* Increase the contact paragraph font size */
 }
 
 .contact-links {
@@ -39,10 +42,11 @@
 
 .contact-links li a {
     text-decoration: none;
-    color: #007BFF;
-    font-size: 1.2rem;
+    color: #ff99cc;
+    font-size: 1.5rem;  /* Increase the contact link font size */
     display: flex;
     align-items: center;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .contact-links li a i {
@@ -51,5 +55,5 @@
 }
 
 .contact-links li a:hover {
-    color: #00C6FF;
+    color: #ffccff;
 }

@@ -1,13 +1,13 @@
 /* projects.css */
 .projects {
     padding: 3rem 2rem;
-    /*margin-top: 2rem;*/
 }
 
 .projects h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;  /* Increase the projects heading font size */
     margin-bottom: 2rem;
-    color: #007BFF;
+    color: #ff99cc;
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
 }
 
 .project-list {
@@ -25,12 +25,15 @@
     width: 300px;
     text-align: left;
     margin-bottom: 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;  /* Increase the project card font size */
 }
 
 .project-card h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;  /* Increase the project card heading font size */
     margin-bottom: 1rem;
-    color: #007BFF;
+    color: #ff99cc;
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
 }
 
 .project-card p {
