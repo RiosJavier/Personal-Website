@@ -9,8 +9,8 @@
 @import url('footer.css');
 
 @font-face {
-    font-family: 'Punk Cyber';
-    src: url('fonts/PunkCyber-Regular.ttf') format('truetype');
+    font-family: 'Punk Cyber ExtrudeSlant';
+    src: url('fonts/PunkCyber-ExtrudeSlant.ttf') format('truetype');
 }
 
 /* Global styles */
@@ -28,7 +28,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Punk Cyber', sans-serif;
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
     font-size: 2rem;
     line-height: 1.2;
 }

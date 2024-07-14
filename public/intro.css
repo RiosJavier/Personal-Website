@@ -26,12 +26,17 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #ff99cc;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.intro h1 span {
+.intro h1 .highlighted-name {
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
     background-color: #ff99cc;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 5px;
 }
 
