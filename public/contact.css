@@ -5,7 +5,7 @@
 }
 
 .contact h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;  /* Increase the contact heading font size */
     margin-bottom: 2rem;
     color: #ff99cc;
     font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
@@ -28,6 +28,7 @@
     margin-bottom: 1rem;
     line-height: 1.6;
     font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;  /* Increase the contact paragraph font size */
 }
 
 .contact-links {
@@ -42,7 +43,7 @@
 .contact-links li a {
     text-decoration: none;
     color: #ff99cc;
-    font-size: 1.2rem;
+    font-size: 1.5rem;  /* Increase the contact link font size */
     display: flex;
     align-items: center;
     font-family: 'DM Sans', sans-serif;
