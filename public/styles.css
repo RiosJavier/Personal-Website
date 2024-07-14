@@ -1,5 +1,5 @@
 /* styles.css */
-@import url('https://fonts.googleapis.com/css2?family=VT323&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('welcome.css');
 @import url('header.css');
 @import url('intro.css');
@@ -7,6 +7,11 @@
 @import url('projects.css');
 @import url('contact.css');
 @import url('footer.css');
+
+@font-face {
+    font-family: 'Punk Cyber';
+    src: url('fonts/PunkCyber-Regular.ttf') format('truetype');
+}
 
 /* Global styles */
 body, h1, h2, h3, p, ul, li, header, main, section, footer {
@@ -23,7 +28,9 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'VT323', monospace;
+    font-family: 'Punk Cyber', sans-serif;
+    font-size: 2rem;
+    line-height: 1.2;
 }
 
 main {
