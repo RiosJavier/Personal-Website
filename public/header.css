@@ -4,7 +4,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, #ff99cc, #ffccff);
+    /*background: linear-gradient(90deg, #ff99cc, #ffccff);*/
+    background: linear-gradient(90deg, #ffffff, #ffccff);
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -18,6 +19,7 @@ header .logo {
     font-size: 2.5rem;  /* Increase the logo font size */
     font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
     margin-left: 1rem; 
+    color: #ff6db6;
 }
 
 nav ul {
@@ -36,12 +38,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-family: 'DM Sans', sans-serif;
+    color: #ff6db6;
+    /*font-family: 'DM Sans', sans-serif;*/
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
     font-size: 1.5rem;  /* Increase the navigation link font size */
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff99cc;
+    color: #ffaed7;
 }

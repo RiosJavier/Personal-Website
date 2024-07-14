@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('download.jpg') no-repeat center center;
+    background: url('noise1.jpg') no-repeat center center;
     background-size: cover;
     z-index: 1000;
 }
