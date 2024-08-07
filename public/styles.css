@@ -9,14 +9,14 @@
 }
 
 /* Global styles */
-body, h1, h2, h3, p, ul, li, header, main, section, footer {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,12 +25,8 @@ body {
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     color: #333;
-    text-align: center;
     font-size: 18px;
-    position: relative;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 @keyframes gradientBG {
@@ -39,23 +35,113 @@ body {
     100% {background-position: 0% 50%;}
 }
 
-.content-wrapper {
-    flex: 1 0 auto;
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #ffffff, #ffccff);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.logo {
+    font-size: 2rem;
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
+    color: #ff6db6;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6db6;
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffaed7;
+}
+
+/* Section styles */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem 2rem;
+}
+
+.section-content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Fun text styles */
 h1, h2, h3 {
     font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
     font-size: 2.5rem;
     line-height: 1.2;
     text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff99cc, 0 0 30px #ff99cc;
+    margin-bottom: 1rem;
 }
 
-main {
-    margin-top: 80px; /* Adjusted for thinner header */
+.highlighted-name {
+    background-color: #ff99cc;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
 }
 
-html {
-    scroll-behavior: smooth;
+/* Navigation styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 1rem 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff99cc;
 }
 
 /* Y2K Elements */
@@ -142,49 +228,6 @@ html {
 .circle-1 { top: 60%; left: 25%; animation-delay: -21s; }
 .circle-2 { bottom: 40%; right: 20%; animation-delay: -23s; }
 
-/* Header styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 2rem; /* Reduced padding for thinner header */
-    background: linear-gradient(90deg, #ffffff, #ffccff);
-    color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: background 1s ease, color 1s ease;
-}
-
-header .logo {
-    font-size: 2rem; /* Slightly reduced for thinner header */
-    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
-    margin-left: 1rem; 
-    color: #ff6db6;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    padding-right: 2rem; 
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ff6db6;
-    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
-    font-size: 1.2rem; /* Slightly reduced for thinner header */
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffaed7;
-}
 
 /* Intro section styles */
 .intro {
@@ -345,31 +388,10 @@ nav ul li a:hover {
     color: #ffccff;
 }
 
-/* Footer styles */
-footer {
-    flex-shrink: 0;
-    padding: 0.5rem 0;
-    background: linear-gradient(90deg, #ffffff, #ffccff);
-    color: #ff99cc;
-    width: 100%;
-    text-align: center;
-    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
-}
-
-/* Responsive styles */
+/* Responsive design */
 @media (max-width: 768px) {
-    .intro {
-        flex-direction: column;
-        padding: 2rem;
-    }
-
-    .intro-image {
-        margin-top: 2rem;
-    }
-
-    .project-list {
-        flex-direction: column;
-        align-items: center;
+    .section-content {
+        padding: 1rem;
     }
 
     nav ul {
@@ -377,9 +399,40 @@ footer {
         align-items: center;
     }
 
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
     header {
         flex-direction: column;
+        padding: 1rem;
     }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .section {
+        padding-top: 8rem;
+    }
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(90deg, #ffffff, #ffccff);
+    color: #ff99cc;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
 }
 
 /* Button styles */
