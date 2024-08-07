@@ -1,6 +1,7 @@
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('welcome.css');
 
 @font-face {
     font-family: 'Punk Cyber ExtrudeSlant';
@@ -14,15 +15,32 @@ body, h1, h2, h3, p, ul, li, header, main, section, footer {
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'DM Sans', sans-serif;
-    background: linear-gradient(135deg, #ff99cc 0%, #ffccff 50%, #99ccff 100%);
-    background-attachment: fixed;
+    background: linear-gradient(135deg, #f7cae4, #e2d1f9, #c0ebf7, #fcf6bd);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: #333;
     text-align: center;
     font-size: 18px;
     position: relative;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
 }
 
 h1, h2, h3 {
@@ -48,26 +66,26 @@ html {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -1; /* Move to background */
+    z-index: -1;
     overflow: hidden;
 }
 
-.star, .shape, .triangle, .square {
+.star, .shape, .triangle, .square, .circle {
     position: absolute;
-    opacity: 0.3;
+    opacity: 0.4;
     animation: float 20s infinite ease-in-out;
 }
 
 .star {
-    width: 40px;
-    height: 40px;
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff99cc"><path d="M12 1l3 7h7l-6 5 2 8-6-5-6 5 2-8-6-5h7z"/></svg>') no-repeat center center;
     background-size: contain;
 }
 
 .shape {
-    width: 60px;
-    height: 60px;
+    width: 80px; /* Increased size */
+    height: 80px; /* Increased size */
     background: radial-gradient(circle, #ff99cc 0%, #99ccff 100%);
     border-radius: 50%;
     filter: blur(5px);
@@ -76,25 +94,33 @@ html {
 .triangle {
     width: 0;
     height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid #ff99cc;
+    border-left: 40px solid transparent; /* Increased size */
+    border-right: 40px solid transparent; /* Increased size */
+    border-bottom: 80px solid #ff99cc; /* Increased size */
     filter: blur(3px);
 }
 
 .square {
-    width: 40px;
-    height: 40px;
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
     background: #99ccff;
     transform: rotate(45deg);
     filter: blur(3px);
 }
 
+.circle {
+    width: 70px; /* New element */
+    height: 70px; /* New element */
+    background: #fcf6bd;
+    border-radius: 50%;
+    filter: blur(3px);
+}
+
 @keyframes float {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(10px, 10px) rotate(90deg); }
-    50% { transform: translate(20px, 0) rotate(180deg); }
-    75% { transform: translate(10px, -10px) rotate(270deg); }
+    25% { transform: translate(15px, 15px) rotate(90deg); }
+    50% { transform: translate(30px, 0) rotate(180deg); }
+    75% { transform: translate(15px, -15px) rotate(270deg); }
 }
 
 /* Positioning for Y2K elements */
@@ -113,6 +139,8 @@ html {
 .triangle-3 { bottom: 30%; right: 45%; animation-delay: -15s; }
 .square-1 { top: 25%; right: 5%; animation-delay: -17s; }
 .square-2 { bottom: 5%; left: 15%; animation-delay: -19s; }
+.circle-1 { top: 60%; left: 25%; animation-delay: -21s; }
+.circle-2 { bottom: 40%; right: 20%; animation-delay: -23s; }
 
 /* Header styles */
 header {
@@ -319,7 +347,8 @@ nav ul li a:hover {
 
 /* Footer styles */
 footer {
-    padding: 0.5rem 0; /* Reduced padding for thinner footer */
+    flex-shrink: 0;
+    padding: 0.5rem 0;
     background: linear-gradient(90deg, #ffffff, #ffccff);
     color: #ff99cc;
     width: 100%;
