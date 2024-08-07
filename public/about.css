@@ -1,13 +1,13 @@
 /* about.css */
 .about-me {
     padding: 3rem 2rem;
-    background-color: #f0f0f3;
+    background: inherit;
 }
 
 .about-me h2 {
     font-size: 3rem;  /* Increase the about heading font size */
     margin-bottom: 2rem;
-    color: #ff99cc;
+    color: #ff6db6;
     font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
 }
 
