@@ -52,3 +52,30 @@ document.querySelectorAll('.section-content').forEach(section => {
     });
     observer.observe(section);
 });
+
+// Improved scroll-triggered animations
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section-content');
+
+    const observerOptions = {
+        root: null, // viewport
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Add the visible class
+            } else {
+                entry.target.classList.remove('visible'); // Remove if out of viewport
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
