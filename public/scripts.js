@@ -37,3 +37,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000); // Display final font for 1 second
     }, 4000); // Duration of the font animation
 });
+// Scroll-triggered animations
+document.querySelectorAll('.section-content').forEach(section => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = "translateY(0)";
+            } else {
+                entry.target.style.opacity = 0;
+                entry.target.style.transform = "translateY(20px)";
+            }
+        });
+    });
+    observer.observe(section);
+});
