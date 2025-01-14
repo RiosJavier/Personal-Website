@@ -79,3 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+// Parallax Scrolling
+document.addEventListener('mousemove', (e) => {
+    document.querySelectorAll('.parallax-layer').forEach((layer, index) => {
+        const speed = index / 100;
+        const x = (window.innerWidth - e.pageX * speed) / 100;
+        const y = (window.innerHeight - e.pageY * speed) / 100;
+        layer.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+
+// Floating Elements Enhancement
+document.querySelectorAll('.shape, .star').forEach((element) => {
+    element.style.animationDelay = `${Math.random() * 5}s`;
+    element.style.animationDuration = `${10 + Math.random() * 5}s`;
+});
