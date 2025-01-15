@@ -27,6 +27,8 @@ body {
     font-size: 18px;
     overflow-x: hidden;
     min-height: 100vh;
+    scroll-snap-type: y mandatory; /* Enable vertical snap scrolling */
+    overflow-y: scroll;
 }
 
 @keyframes gradientBG {
@@ -88,12 +90,13 @@ main {
 }
 
 .section {
-    min-height: 100vh;
-    display: flex;
     flex-direction: column;
+    height: 100vh; /* Each section takes up full viewport height */
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    scroll-snap-align: start; /* Align the section at the start of the viewport */
+    padding: 1rem; /* Adjust padding to reduce dead space */
 }
 
 .section-content {
