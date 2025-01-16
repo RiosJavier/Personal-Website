@@ -125,24 +125,6 @@ p {
     line-height: 1.6;
 }
 
-/* Y2K Elements */
-.y2k-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.star, .shape, .triangle, .square, .circle {
-    position: absolute;
-    opacity: 0.4;
-    animation: float 20s infinite ease-in-out;
-}
-
 /* Updated Project Section Styles */
 #projects .section-content {
     width: 100%;
@@ -306,3 +288,87 @@ footer {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20%); }
 }
+
+/* Y2K Elements */
+.y2k-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star, .shape, .triangle, .square, .circle {
+    position: absolute;
+    opacity: 0.4;
+    animation: float 20s infinite ease-in-out;
+}
+
+.star {
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff99cc"><path d="M12 1l3 7h7l-6 5 2 8-6-5-6 5 2-8-6-5h7z"/></svg>') no-repeat center center;
+    background-size: contain;
+}
+
+.shape {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #ff99cc 0%, #99ccff 100%);
+    border-radius: 50%;
+    filter: blur(5px);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid #ff99cc;
+    filter: blur(3px);
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    background: #99ccff;
+    transform: rotate(45deg);
+    filter: blur(3px);
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    background: #fcf6bd;
+    border-radius: 50%;
+    filter: blur(3px);
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(15px, 15px) rotate(90deg); }
+    50% { transform: translate(30px, 0) rotate(180deg); }
+    75% { transform: translate(15px, -15px) rotate(270deg); }
+}
+
+/* Positioning for Y2K elements */
+.star-1 { top: 10%; left: 10%; animation-delay: -2s; }
+.star-2 { top: 20%; right: 20%; animation-delay: -4s; }
+.star-3 { bottom: 15%; left: 30%; animation-delay: -6s; }
+.star-4 { top: 40%; right: 40%; animation-delay: -8s; }
+.star-5 { bottom: 20%; right: 10%; animation-delay: -10s; }
+.shape-1 { top: 15%; left: 20%; animation-delay: -1s; }
+.shape-2 { top: 30%; right: 25%; animation-delay: -3s; }
+.shape-3 { bottom: 25%; left: 35%; animation-delay: -5s; }
+.shape-4 { top: 45%; right: 15%; animation-delay: -7s; }
+.shape-5 { bottom: 10%; right: 30%; animation-delay: -9s; }
+.triangle-1 { top: 5%; left: 40%; animation-delay: -11s; }
+.triangle-2 { top: 50%; left: 5%; animation-delay: -13s; }
+.triangle-3 { bottom: 30%; right: 45%; animation-delay: -15s; }
+.square-1 { top: 25%; right: 5%; animation-delay: -17s; }
+.square-2 { bottom: 5%; left: 15%; animation-delay: -19s; }
+.circle-1 { top: 60%; left: 25%; animation-delay: -21s; }
+.circle-2 { bottom: 40%; right: 20%; animation-delay: -23s; }
