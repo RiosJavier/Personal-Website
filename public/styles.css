@@ -1,4 +1,6 @@
-/* styles.css */
+/* ---------------------------------------------------------------------
+   Existing Imports & Fonts
+--------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 @import url('welcome.css');
 
@@ -7,7 +9,9 @@
     src: url('fonts/PunkCyber-ExtrudeSlant.ttf') format('truetype');
 }
 
-/* Global styles */
+/* ---------------------------------------------------------------------
+   Global Resets & Body
+--------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +41,9 @@ body {
     100% {background-position: 0% 50%;}
 }
 
-/* Header styles */
+/* ---------------------------------------------------------------------
+   Header
+--------------------------------------------------------------------- */
 header {
     display: flex;
     justify-content: space-between;
@@ -84,7 +90,9 @@ nav ul li a:hover {
     text-shadow: 0 0 5px #ff69b4;
 }
 
-/* Main content styles */
+/* ---------------------------------------------------------------------
+   Main & Section
+--------------------------------------------------------------------- */
 main {
     padding-top: 60px;
 }
@@ -108,7 +116,9 @@ main {
     box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
 }
 
-/* Typography */
+/* ---------------------------------------------------------------------
+   Typography
+--------------------------------------------------------------------- */
 h1, h2, h3 {
     font-family: 'Punk Cyber ExtrudeSlant', sans-serif;
     color: #ff6db6;
@@ -125,7 +135,9 @@ p {
     line-height: 1.6;
 }
 
-/* Updated Project Section Styles */
+/* ---------------------------------------------------------------------
+   Projects
+--------------------------------------------------------------------- */
 #projects .section-content {
     width: 100%;
     max-width: 1200px;
@@ -157,19 +169,13 @@ p {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
 }
 
-.project-card h3 {
-    margin-top: 0;
-}
-
-.project-card .button {
-    margin-top: auto;
-    align-self: flex-start;
-}
-
-/* Button styles */
+/* ---------------------------------------------------------------------
+   Buttons
+--------------------------------------------------------------------- */
 .button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -196,7 +202,9 @@ p {
     border: 2px solid #ff69b4;
 }
 
-/* Footer styles */
+/* ---------------------------------------------------------------------
+   Footer
+--------------------------------------------------------------------- */
 footer {
     background: linear-gradient(90deg, #ffffff, #ffccff);
     color: #ff99cc;
@@ -206,7 +214,9 @@ footer {
     margin-top: 2rem;
 }
 
-/* Responsive styles */
+/* ---------------------------------------------------------------------
+   Responsive
+--------------------------------------------------------------------- */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -247,24 +257,14 @@ footer {
     }
 }
 
-/* Animations */
-@keyframes float {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(15px, 15px) rotate(90deg); }
-    50% { transform: translate(30px, 0) rotate(180deg); }
-    75% { transform: translate(15px, -15px) rotate(270deg); }
-}
-
-/* Glassmorphism Effect */
+/* ---------------------------------------------------------------------
+   Glassmorphism & Section Content Animation
+--------------------------------------------------------------------- */
 .section-content {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
-}
-
-/* Section Content Animations */
-.section-content {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -275,21 +275,9 @@ footer {
     transform: translateY(0);
 }
 
-/* Parallax Background */
-.parallax-layer {
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background-size: cover;
-    animation: parallax 20s infinite linear;
-}
-
-@keyframes parallax {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20%); }
-}
-
-/* Y2K Elements */
+/* ---------------------------------------------------------------------
+   Parallax & Y2K Elements
+--------------------------------------------------------------------- */
 .y2k-container {
     position: fixed;
     top: 0;
@@ -304,9 +292,22 @@ footer {
 .star, .shape, .triangle, .square, .circle {
     position: absolute;
     opacity: 0.4;
-    animation: float 20s infinite ease-in-out;
+    animation: float 20s infinite ease-in-out, pulse 2s infinite alternate;
 }
 
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(15px, 15px) rotate(90deg); }
+    50% { transform: translate(30px, 0) rotate(180deg); }
+    75% { transform: translate(15px, -15px) rotate(270deg); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; transform: scale(1); }
+    100% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* Star background image */
 .star {
     width: 60px;
     height: 60px;
@@ -347,13 +348,6 @@ footer {
     filter: blur(3px);
 }
 
-@keyframes float {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(15px, 15px) rotate(90deg); }
-    50% { transform: translate(30px, 0) rotate(180deg); }
-    75% { transform: translate(15px, -15px) rotate(270deg); }
-}
-
 /* Positioning for Y2K elements */
 .star-1 { top: 10%; left: 10%; animation-delay: -2s; }
 .star-2 { top: 20%; right: 20%; animation-delay: -4s; }
@@ -372,3 +366,182 @@ footer {
 .square-2 { bottom: 5%; left: 15%; animation-delay: -19s; }
 .circle-1 { top: 60%; left: 25%; animation-delay: -21s; }
 .circle-2 { bottom: 40%; right: 20%; animation-delay: -23s; }
+
+/* ---------------------------------------------------------------------
+   Noise Overlay (body::before)
+--------------------------------------------------------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Use your noise1.png or base64-encoded noise */
+  background: url('noise1.png') repeat;
+  opacity: 0.4;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 1; /* Adjust if you need it behind shapes (use -2 or so) */
+}
+
+/* ---------------------------------------------------------------------
+   Optional Scanlines Overlay (body::after)
+   Uncomment if you want retro CRT lines
+--------------------------------------------------------------------- */
+/*
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.02) 0px,
+    rgba(255,255,255,0.02) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+*/
+
+/* ---------------------------------------------------------------------
+   Neon, Glitch, RGB-Split, & Glow Border Classes
+--------------------------------------------------------------------- */
+/* Neon glow text */
+.neon-text {
+  color: #fff;
+  text-shadow: 
+    0 0 5px #ff69b4,
+    0 0 10px #ff69b4,
+    0 0 20px #ff69b4,
+    0 0 40px #ff69b4,
+    0 0 80px #ff69b4;
+  transition: text-shadow 0.3s;
+}
+.neon-text:hover {
+  text-shadow: 
+    0 0 10px #ff69b4,
+    0 0 20px #ff69b4,
+    0 0 40px #ff69b4,
+    0 0 80px #ff69b4,
+    0 0 120px #ff69b4;
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+  display: inline-block;
+  animation: glitch-anim 2s infinite;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* Remove or comment out the clip property */
+  /* clip: rect(44px, 450px, 56px, 0); */
+  /* or set it to full height to avoid partial cuts: */
+  clip: rect(auto, auto, auto, auto);
+}
+.glitch::before {
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 2s infinite;
+}
+.glitch::after {
+  text-shadow: -2px 0 #00fff9;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim2 2s infinite;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(12px, 9999px, 14px, 0);
+    transform: skew(0.5deg);
+  }
+  5% {
+    clip: rect(40px, 9999px, 85px, 0);
+    transform: skew(0.5deg);
+  }
+  10% {
+    clip: rect(80px, 9999px, 50px, 0);
+    transform: skew(0.5deg);
+  }
+  15% {
+    clip: rect(20px, 9999px, 80px, 0);
+    transform: skew(0.5deg);
+  }
+  20% {
+    clip: rect(45px, 9999px, 14px, 0);
+    transform: skew(0.5deg);
+  }
+  100% {
+    transform: skew(0.5deg);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(85px, 9999px, 140px, 0);
+    transform: skew(0.5deg);
+  }
+  5% {
+    clip: rect(10px, 9999px, 40px, 0);
+    transform: skew(0.5deg);
+  }
+  10% {
+    clip: rect(30px, 9999px, 80px, 0);
+    transform: skew(0.5deg);
+  }
+  15% {
+    clip: rect(70px, 9999px, 40px, 0);
+    transform: skew(0.5deg);
+  }
+  20% {
+    clip: rect(20px, 9999px, 14px, 0);
+    transform: skew(0.5deg);
+  }
+  100% {
+    transform: skew(0.5deg);
+  }
+}
+
+/* RGB split hover effect */
+.rgb-split {
+  position: relative;
+  display: inline-block;
+}
+.rgb-split::before,
+.rgb-split::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  overflow: hidden;
+  pointer-events: none;
+}
+.rgb-split:hover::before {
+  left: -2px;
+  text-shadow: -1px 0 red;
+}
+.rgb-split:hover::after {
+  left: 2px;
+  text-shadow: 1px 0 cyan;
+}
+
+/* Glow border for containers */
+.glow-border {
+  border: 1px solid #ff69b4;
+  box-shadow: 0 0 10px #ff69b4;
+  transition: box-shadow 0.3s;
+}
+.glow-border:hover {
+  box-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4;
+}

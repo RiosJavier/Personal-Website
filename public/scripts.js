@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000); // Display final font for 1 second
     }, 4000); // Duration of the font animation
 });
+
 // Scroll-triggered animations
 document.querySelectorAll('.section-content').forEach(section => {
     const observer = new IntersectionObserver(entries => {
@@ -74,11 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-
     sections.forEach(section => {
         observer.observe(section);
     });
 });
+
 // Parallax Scrolling
 document.addEventListener('mousemove', (e) => {
     document.querySelectorAll('.parallax-layer').forEach((layer, index) => {
